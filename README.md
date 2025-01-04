@@ -17,4 +17,4 @@ issuesで報告お願いします。
 基本的にライブラリごとのヘッダーファイルに記述しているのでそちらを参照してください。
 
 ## ライセンス
-すべて (https://www.apache.org/licenses/LICENSE-2.0.txt)[Apache2.0] で使用可能です。
+すべてhttps://www.apache.org/licenses/LICENSE-2.0.txtで使用可能です。
