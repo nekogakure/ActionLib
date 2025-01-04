@@ -10,7 +10,7 @@ void catLog_clear() {
     }
 }
 
-void Catlog(const char *message) {
+void catLog(const char *message) {
     if (CATLOG) {
         // 現在の時間を取得
         time_t t = time(NULL);

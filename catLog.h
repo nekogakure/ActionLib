@@ -21,5 +21,5 @@
 #define CATLOG true
 #define LOG_FILE "catLog.txt"
 
-void catLog_clear()
-void catLog(const char *message)
+void catLog_clear();
+void catLog(const char *message);
