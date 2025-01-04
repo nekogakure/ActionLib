@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall
 OBJ = catLog_test.o catLog.o
-EXEC = catLog_test
+EXEC = catLog
 
 $(EXEC): $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC)
