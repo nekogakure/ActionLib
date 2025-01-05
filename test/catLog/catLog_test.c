@@ -1,4 +1,4 @@
-#include "../../catLog.h"
+#include "catLog.h"
 #include <string.h>
 
 int main(int argc, char *argv[]) {
