@@ -5,33 +5,17 @@
 #include <time.h>
 
 // グローバル設定
-static char LOG_FILE[256] = "project.log";  // デフォルトログファイル名
+static char LOG_FILE[256] = "cat.log";  // デフォルトログファイル名
 static int CATLOG = 1;                      // デフォルトでログを有効化
 
-// .configファイルの設定を読み込む
-void loadConfig(const char *configFile) {
-    FILE *file = fopen(configFile, "r");
-    if (file == NULL) {
-        perror("Error opening config file");
-        return;
-    }
-
-    char line[256];
-    while (fgets(line, sizeof(line), file)) {
-        // 行末の改行を取り除く
-        line[strcspn(line, "\n")] = '\0';
-
-        // 設定を解析
-        if (strncmp(line, "LOG_FILE=", 9) == 0) {
-            strncpy(LOG_FILE, line + 9, sizeof(LOG_FILE) - 1);
-            LOG_FILE[sizeof(LOG_FILE) - 1] = '\0';  // 確実に終端
-        } else if (strncmp(line, "CATLOG=", 7) == 0) {
-            CATLOG = atoi(line + 7);  // "1" または "0" を解釈
-        }
-    }
-
-    fclose(file);
+void catLog_conf_FILE(const char *logFile) {
+    LOG_FILE[256] = logFile;
 }
+
+void catLog_conf_IO(int catlog) {
+    CATLOG = catlog;
+}
+
 
 // ログファイルを消去する関数
 void catLog_clear() {

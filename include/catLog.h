@@ -28,5 +28,8 @@
 #include <stdbool.h>
 #include <string.h>
 
+void catLog_conf_FILE(const char *logFile);
+void catLog_conf_IO(int catlog);
 void catLog_clear();
 void catLog(const char *message);
+void loadConfig();

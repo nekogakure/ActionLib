@@ -1,7 +1,11 @@
-#include "catLog.h"
+#include "../../include/catLog.h"
 #include <string.h>
 
 int main(int argc, char *argv[]) {
+
+    catLog_conf_FILE("log.txt");
+    catLog_conf_IO(1);
+/*
     // コマンドライン引数が '--clear' であればログをクリア
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "--clear") == 0) {
@@ -22,7 +26,9 @@ int main(int argc, char *argv[]) {
         snprintf(buffer, sizeof(buffer), "%d", i);
         catLog(buffer);
         i++;
-    }
+    } */
+
+    catLog_clear();
     
     return 0;
 }
